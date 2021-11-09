@@ -1,6 +1,6 @@
 import './StoryCardsArea.css'
 import StoryTitleCard from '../StoryTitleCard/StoryTitleCard';
-import { uniqueId } from 'lodash';
+import { uuid } from 'uuidv4';
 
 const StoryCardsArea = ({ stories }) => {
   const storyCards = stories.map((story => {
@@ -9,6 +9,7 @@ const StoryCardsArea = ({ stories }) => {
     
     return(
       <StoryTitleCard
+        key={uuid()}
         story={story}
         image={storyImage}
       />
