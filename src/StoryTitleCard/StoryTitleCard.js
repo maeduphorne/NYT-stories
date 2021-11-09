@@ -1,3 +1,5 @@
+import './StoryTitleCard.css'
+
 const StoryTitleCard = ({ story, storyImage }) => {
   // story Image should map through multimedia within the found story and find the thumbnail sized image
   return(
@@ -7,7 +9,7 @@ const StoryTitleCard = ({ story, storyImage }) => {
         src={storyImage.url}
         alt={storyImage.caption}
       />
-      <h3>{story.title}</h3>
+      <h3>TITLE: {story.title}</h3>
     </article>
   )
 }
