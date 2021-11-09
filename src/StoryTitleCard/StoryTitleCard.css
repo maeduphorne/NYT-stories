@@ -1,0 +1,10 @@
+.story-title-card {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.story-image {
+  width: 100%;
+  object-fit: cover;
+  overflow: clip;
+}
