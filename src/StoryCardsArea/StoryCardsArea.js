@@ -2,7 +2,7 @@ import './StoryCardsArea.css'
 import StoryTitleCard from '../StoryTitleCard/StoryTitleCard';
 import apiCalls from '../api/apiCalls';
 import { useEffect, useState } from 'react';
-const { uuid } = require('uuidv4');
+const { v4: uuid } = require('uuid');
 
 const StoryCardsArea = () => {
   const [stories, setStories]= useState([])
