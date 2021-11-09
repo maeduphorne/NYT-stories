@@ -1,6 +1,6 @@
 import './StoryCardsArea.css'
 import StoryTitleCard from '../StoryTitleCard/StoryTitleCard';
-import { uuid } from 'uuidv4';
+const { uuid } = require('uuidv4');
 
 const StoryCardsArea = ({ stories }) => {
   const storyCards = stories.map((story => {
