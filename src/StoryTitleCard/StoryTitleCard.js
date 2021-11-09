@@ -2,7 +2,7 @@ import './StoryTitleCard.css'
 
 const StoryTitleCard = ({ story, image }) => {
   return(
-    <article class="storyTitleCard">
+    <article className="storyTitleCard">
       <img
         className="story-image"
         src={image.url}
