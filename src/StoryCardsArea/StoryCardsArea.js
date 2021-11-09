@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 const { uuid } = require('uuidv4');
 
 const StoryCardsArea = () => {
-  // const [isLoading, setIsLoading] = useState(true)
   const [stories, setStories]= useState([])
   const [error, setError]= useState('')
 
@@ -13,8 +12,7 @@ const StoryCardsArea = () => {
     setError('')
     apiCalls.fetchStoriesData()
     .then((data => setStories(data.results)))
-    .catch((err) => console.log(err))
-    // .then(setIsLoading(false))
+    .catch((err) => setError(err))
   }, [])
 
   const storyCards = stories.map((story => {
