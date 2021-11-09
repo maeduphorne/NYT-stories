@@ -1,5 +1,5 @@
 const apiCalls = {
-  fetchCountriesData: ()  => {
+  fetchStoriesData: ()  => {
       return fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=vL2ZALsvqjevKxlzZSCBoSF3YWZ102OD')
           .then((response) => checkForErrors(response))
         
