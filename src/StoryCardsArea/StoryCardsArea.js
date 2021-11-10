@@ -16,7 +16,7 @@ const StoryCardsArea = () => {
   }, [])
 
   const storyCards = stories.map((story => {
-    const storyImage = story.multimedia.find(image => image.format === "mediumThreeByTwo210")
+    const storyImage = story.multimedia.find(image => image.format === "superJumbo")
     return(
       <StoryTitleCard
         key={uuid()}
@@ -26,7 +26,9 @@ const StoryCardsArea = () => {
     )
   }))
   return (
-    <div className="stories-area">{storyCards}</div>
+    <div className="stories-area">
+      {storyCards}
+    </div>
   )
 }
 
