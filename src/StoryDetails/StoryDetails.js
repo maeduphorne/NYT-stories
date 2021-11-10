@@ -56,7 +56,7 @@ const StoryDetails = () => {
       <h3>{story.title}</h3>
       <h4>{story.byline}</h4>
       <p>{story.abstract}</p>
-      // Set up link with path of this url
+      {/* Set up link with path of this url */}
       <p>{story.short_url}</p>
     </article>
   )

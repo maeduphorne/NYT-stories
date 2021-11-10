@@ -1,19 +1,8 @@
 import './StoryCardsArea.css'
 import StoryTitleCard from '../StoryTitleCard/StoryTitleCard';
-import apiCalls from '../api/apiCalls';
-import { useEffect, useState } from 'react';
 const { v4: uuid } = require('uuid');
 
-const StoryCardsArea = () => {
-  const [stories, setStories]= useState([])
-  const [error, setError]= useState('')
-
-  useEffect(() => {
-    setError('')
-    apiCalls.fetchStoriesData()
-    .then((data => setStories(data.results)))
-    .catch((err) => setError(err))
-  }, [])
+const StoryCardsArea = ({ stories }) => {
 
   const storyCards = stories.map((story => {
     const storyImage = story.multimedia.find(image => image.format === "superJumbo")
