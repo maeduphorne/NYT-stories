@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const StoryTitleCard = ({ story, image }) => {
   return(
-    <Link to={`/${story.title}`} className="story-title-card">
+    <Link to={'/'} className="story-title-card">
       <img
         className="story-image"
         src={image.url}
