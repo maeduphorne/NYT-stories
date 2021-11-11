@@ -1,6 +1,5 @@
 import './StoryCardsArea.css'
 import StoryTitleCard from '../StoryTitleCard/StoryTitleCard';
-const { v4: uuid } = require('uuid');
 
 const StoryCardsArea = ({ stories }) => {
 
@@ -8,7 +7,7 @@ const StoryCardsArea = ({ stories }) => {
     const storyImage = story.multimedia.find(image => image.format === "superJumbo")
     return(
       <StoryTitleCard
-        key={uuid()}
+        key={story.id}
         story={story}
         image={storyImage}
       />
