@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import StoryDetails from '../StoryDetails/StoryDetails';
 
 const StoryTitleCard = ({ story, image, setStory }) => {
-  console.log('story title card', story.id)
   return(
     <Link 
     to={`/article/:${story.id}`} 

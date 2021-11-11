@@ -3,20 +3,18 @@ import Header from '../Header/Header'
 
 const StoryDetails = ({ story }) => {
 
-  // const findStory = stories.find(story => story.id === matchMedia.params.id);
-  console.log('I am the story details', story)
-  // const storyImage = story.multimedia.find(image => image.format === "superJumbo")
+  const storyImage = story.multimedia.find(image => image.format === "superJumbo")
 
   return(
     <div>
       <Header/>
       <article className="story-details">
         
-        {/* <img
+        <img
           className="story-image"
           src={storyImage.url}
           alt={storyImage.caption}
-        /> */}
+        />
         <div className="story-info">
           <h3>{story.title}</h3>
           <h4>{story.byline}</h4>
