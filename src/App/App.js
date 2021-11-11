@@ -5,10 +5,11 @@ import StoryDetails from '../StoryDetails/StoryDetails';
 import apiCalls from '../api/apiCalls';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
-  const [stories, setStories]= useState([])
+  const [stories, setStories] = useState([])
+  const [story, setStory] = useState({})
   const [error, setError]= useState('')
 
   const addID = (data) => {
@@ -21,14 +22,12 @@ function App() {
     .catch((err) => setError(err))
   }, [])
 
-// how to select a single story?
-// on click, find the story that is the target of the click (by ID?)
-
   return (
     <div className="App">
-      <Header/>
-      <StoryCardsArea stories={stories}/>
-      <StoryDetails />
+      <Routes>
+        <Route path="/" element={<StoryCardsArea stories={stories} setStory={setStory}/>} />
+        <Route path={`/article/:${story.id}`} element={<StoryDetails story={story}/>}/>
+      </Routes>
     </div>
   );
 }
