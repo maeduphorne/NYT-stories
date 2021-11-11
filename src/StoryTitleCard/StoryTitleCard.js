@@ -1,9 +1,15 @@
 import './StoryTitleCard.css'
 import { Link } from 'react-router-dom';
+import StoryDetails from '../StoryDetails/StoryDetails';
 
-const StoryTitleCard = ({ story, image }) => {
+const StoryTitleCard = ({ story, image, setStory }) => {
+  console.log('story title card', story.id)
   return(
-    <Link to={'/'} className="story-title-card">
+    <Link 
+    to={`/article/:${story.id}`} 
+    element ={<StoryDetails story={story} />} 
+    className="story-title-card" 
+    onClick={() => setStory(story)}>
       <img
         className="story-image"
         src={image.url}
