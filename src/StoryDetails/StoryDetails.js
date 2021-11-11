@@ -9,7 +9,6 @@ const StoryDetails = ({ story }) => {
     <div>
       <Header/>
       <article className="story-details">
-        
         <img
           className="story-image"
           src={storyImage.url}
@@ -19,8 +18,7 @@ const StoryDetails = ({ story }) => {
           <h3>{story.title}</h3>
           <h4>{story.byline}</h4>
           <p>{story.abstract}</p>
-          {/* Set up link with path of this url */}
-          <p>{story.short_url}</p>
+          <a href={`${story.short_url}`}>View Full Story Here</a>
         </div>
       </article>
     </div>
