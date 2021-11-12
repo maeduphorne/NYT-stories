@@ -18,7 +18,7 @@ const StoryDetails = ({ story }) => {
           <h3>{story.title}</h3>
           <h4>{story.byline}</h4>
           <p>{story.abstract}</p>
-          <a href={`${story.short_url}`}>View Full Story Here</a>
+          <a href={`${story.short_url}`} className="nyt-link">View Full Story Here</a>
         </div>
       </article>
     </div>
