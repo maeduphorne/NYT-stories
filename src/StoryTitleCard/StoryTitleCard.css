@@ -1,10 +1,31 @@
 .story-title-card {
+  text-decoration: none;
   border: 1px solid black;
   text-align: center;
+  color: black;
 }
 
 .story-image {
   width: 100%;
   object-fit: cover;
   overflow: clip;
+  float: left;
+  width:  14em;
+  height: 14em;
+}
+
+.search-bar {
+  width: 30%;
+  outline: none;
+  padding: 5px;
+  border: solid #5e0000 2px;
+}
+
+.search-btn,
+.display-all {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  outline: none;
+  border: solid white 1px;
 }
