@@ -35,3 +35,16 @@ h4{
   margin-top: 1.5em;
   padding: .4em;
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 800px) {
+  .story-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+  }
+
+  .detail-story-image{
+    display: flex;
+  }
+}
