@@ -2,17 +2,26 @@ import "./Search.css";
 import { useState } from 'react'
 
 const Search = ({ filterStories }) => {
-  
+  const [searchInput, setSearchInput] = useState('')
+
   const handleSearch = (e) => {
     e.preventDefault()
+    setSearchInput(e.target.value)
     filterStories(e.target.value)
+  }
+
+  const submitSearch = (e) => {
+    e.preventDefault();
+    filterStories(searchInput)
+  }
+
+  const handleClear = () => {
+    setSearchInput()
+    filterStories()
   }
 
   return(
     <form action="/" method="get">
-        {/* <label htmlFor="story-search">
-            <span className="visually-hidden">Search for news article</span>
-        </label> */}
         <input
             type="text"
             id="story-search"
@@ -20,7 +29,20 @@ const Search = ({ filterStories }) => {
             name="search"
             onChange={(e) => handleSearch(e)} 
         />
-        <button type="submit">Search</button>
+        <button 
+          type="submit"
+          className="search-btn"
+          onClick={(e) => submitSearch(e)}
+        >
+          Search
+        </button>
+        <button
+          className="display-all"
+          type="submit"
+          onClick={(e) => handleClear(e)}
+        >
+          Display All
+        </button>
     </form>
   )
 }
