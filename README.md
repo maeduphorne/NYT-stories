@@ -33,6 +33,8 @@ IPhone view for responsive design:
 
 ## Wins
   - Planning well to keep project on track
+      - [Planning Board](https://trello.com/b/liN8XYfl/nyt-take-home)
+      - [Wireframes](https://www.figma.com/file/R9G2mu6547YrnGRVly1vFB/nyt-stories?node-id=0%3A1)
   - Self-teaching and implementing the new version of React Router (v6)
   - Keeping pace within a time frame and prioritizing necessary tasks
   - Using data down, actions up principles to enact a search feature
