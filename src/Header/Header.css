@@ -7,9 +7,12 @@
 
 h1{
   margin: 0;
-  padding-top: 1em;
+  padding-top: .5em;
+  font-size: xxx-large;
+  font-family: 'UnifrakturCook', cursive;
 }
 
 h2{
   padding-bottom: 1em;
+  font-size: medium;
 }

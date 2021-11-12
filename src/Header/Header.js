@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <Link to="/" className="header">
       <h1>New York Times Top Stories</h1>
-      <h2>Date: 11/12/21</h2>
+      <h2>11/12/21</h2>
     </Link>
   )
 }
