@@ -9,8 +9,8 @@ import { Route, Routes } from 'react-router-dom';
 
 function App() {
   const [stories, setStories] = useState([])
-  // const [searchInput, setSearchInput] = useState([])
-  const [filteredStories, setFilteredStories] = useState([])
+
+  const [filteredStories, setFilteredStories] = useState()
   const [story, setStory] = useState({})
   const [error, setError]= useState('')
 
@@ -27,17 +27,22 @@ function App() {
   useEffect(() => {
     apiCalls.fetchStoriesData()
     .then((data => setStories(addID(data.results))))
+    .then(console.log(filteredStories))
     .catch((err) => setError(err))
   }, [])
 
   return (
     <div className="App">
       <Routes>
+        {!filteredStories &&
         <Route path="/" element={
           <StoryCardsArea stories={stories} setStory={setStory} filterStories={filterStories} />
-        }/>
+        }/> }
+        {filteredStories &&
+        <Route path="/" element={
+          <StoryCardsArea stories={filteredStories} setStory={setStory} filterStories={filterStories} />
+        }/> }
         <Route path={`/article/:${story.id}`} element={<StoryDetails story={story}/>}/>
-        {/* <Route path={} element={<p>Whoops! Nothing to see here.</p>}/> */}
       </Routes>
     </div>
   );
