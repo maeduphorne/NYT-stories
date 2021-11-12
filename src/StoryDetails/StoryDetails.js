@@ -1,5 +1,6 @@
 import './StoryDetails.css'
 import Header from '../Header/Header'
+import { Link } from 'react-router-dom'
 
 const StoryDetails = ({ story }) => {
 
@@ -19,6 +20,9 @@ const StoryDetails = ({ story }) => {
           <h4>{story.byline}</h4>
           <p>{story.abstract}</p>
           <a href={`${story.short_url}`} className="nyt-link">View Full Story Here</a>
+          <Link to={'/'}>
+            <button className="home-btn">TAKE ME HOME</button>
+          </Link>
         </div>
       </article>
     </div>

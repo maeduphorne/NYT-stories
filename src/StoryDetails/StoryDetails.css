@@ -24,3 +24,13 @@
 h4{
   margin-top: 0;
 }
+
+.home-btn{
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  outline: none;
+  border: solid white 1px;
+  margin-top: 1.5em;
+  padding: .4em;
+}
