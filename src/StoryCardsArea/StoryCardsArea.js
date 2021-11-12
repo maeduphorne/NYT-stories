@@ -1,32 +1,27 @@
 import './StoryCardsArea.css'
 import StoryTitleCard from '../StoryTitleCard/StoryTitleCard';
-import apiCalls from '../api/apiCalls';
-import { useEffect, useState } from 'react';
-const { uuid } = require('uuidv4');
+import Header from '../Header/Header';
 
-const StoryCardsArea = () => {
-  const [stories, setStories]= useState([])
-  const [error, setError]= useState('')
-
-  useEffect(() => {
-    setError('')
-    apiCalls.fetchStoriesData()
-    .then((data => setStories(data.results)))
-    .catch((err) => setError(err))
-  }, [])
+const StoryCardsArea = ({ stories, setStory }) => {
 
   const storyCards = stories.map((story => {
-    const storyImage = story.multimedia.find(image => image.format === "mediumThreeByTwo210")
+    const storyImage = story.multimedia.find(image => image.format === "superJumbo")
     return(
       <StoryTitleCard
-        key={uuid()}
+        key={story.id}
         story={story}
         image={storyImage}
+        setStory={setStory}
       />
     )
   }))
   return (
-    <div className="stories-area">{storyCards}</div>
+    <div className="homepage">
+      <Header/>
+      <div className="stories-area">
+        {storyCards}
+      </div>
+    </div>
   )
 }
 
