@@ -10,7 +10,7 @@ const StoryDetails = ({ story }) => {
       <Header/>
       <article className="story-details">
         <img
-          className="story-image"
+          className="detail-story-image"
           src={storyImage.url}
           alt={storyImage.caption}
         />
