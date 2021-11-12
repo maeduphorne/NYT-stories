@@ -27,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<StoryCardsArea stories={stories} setStory={setStory}/>} />
         <Route path={`/article/:${story.id}`} element={<StoryDetails story={story}/>}/>
+        {/* <Route path={} element={<p>Whoops! Nothing to see here.</p>}/> */}
       </Routes>
     </div>
   );

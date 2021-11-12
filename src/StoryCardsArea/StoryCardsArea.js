@@ -16,9 +16,11 @@ const StoryCardsArea = ({ stories, setStory }) => {
     )
   }))
   return (
-    <div className="stories-area">
+    <div className="homepage">
       <Header/>
-      {storyCards}
+      <div className="stories-area">
+        {storyCards}
+      </div>
     </div>
   )
 }
