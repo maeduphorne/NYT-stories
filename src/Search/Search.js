@@ -21,11 +21,12 @@ const Search = ({ filterStories }) => {
   }
 
   return(
-    <form action="/" method="get">
+    <form action="/" method="get" className="form">
         <input
+            className="search-bar"
             type="text"
             id="story-search"
-            placeholder="Search for news article"
+            placeholder="Search by title"
             name="search"
             onChange={(e) => handleSearch(e)} 
         />
