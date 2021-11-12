@@ -20,3 +20,18 @@
   outline: none;
   border: solid white 1px;
 }
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px) {
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-btn,
+  .display-all {
+    width: 20%;
+  }
+}
