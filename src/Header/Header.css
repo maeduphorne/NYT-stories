@@ -1,14 +1,23 @@
 .header {
+  text-decoration: none;
+  width: 100%;
+}
+
+.header-style {
   background-color: black;
-  width: 100%
-  /* color: white; */
+  width: 100%;
 }
 
 h1{
   margin: 0;
-  padding-top: 1em;
+  padding-top: .5em;
+  font-size: xxx-large;
+  font-family: 'UnifrakturCook', cursive;
+  color: white;
 }
 
 h2{
   padding-bottom: 1em;
+  font-size: medium;
+  color: white;
 }
