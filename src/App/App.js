@@ -27,7 +27,6 @@ function App() {
   useEffect(() => {
     apiCalls.fetchStoriesData()
     .then((data => setStories(addID(data.results))))
-    .then(console.log(filteredStories))
     .catch((err) => setError(err))
   }, [])
 
